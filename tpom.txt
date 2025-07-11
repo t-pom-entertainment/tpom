@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Your Artist Name | Music</title>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap' rel='stylesheet'>
+
+  <style>
+    :root {
+      --bg: #fefefe;
+      --primary: #111;
+      --accent: #b76df1;
+      --soft-accent: #eae0ff;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--primary);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: url('https://source.unsplash.com/1600x900/?music,studio') center/cover no-repeat;
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      margin: 0 0 10px;
+      font-weight: 800;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .track {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .track img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .track-content {
+      padding: 28px;
+    }
+
+    .track h2 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+
+    .track audio {
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    .track p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 0.95rem;
+      color: #777;
+      background: var(--soft-accent);
+    }
+
+    .socials a {
+      margin: 0 14px;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--primary);
+      transition: all 0.2s ease;
+    }
+
+    .socials a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .track h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Your Artist Name</h1>
+    <p>Independent musician • Ambient beats & dreamy sounds</p>
+  </header>
+
+  <main>
+    <div class='track'>
+      <img src='https://source.unsplash.com/800x400/?vinyl,music' alt='Cover art for Song Title One'>
+      <div class='track-content'>
+        <h2>Song Title One</h2>
+        <audio controls>
+          <source src='music/song1.mp3' type='audio/mpeg'>
+          Your browser does not support the audio element.
+        </audio>
+        <p>This track explores nostalgic tones layered over mellow percussion. Ideal for a quiet night.</p>
+      </div>
+    </div>
+
+    <div class='track'>
+      <img src='https://source.unsplash.com/800x400/?soundwave,abstract' alt='Cover art for Song Title Two'>
+      <div class='track-content'>
+        <h2>Song Title Two</h2>
+        <audio controls>
+          <source src='music/song2.mp3' type='audio/mpeg'>
+          Your browser does not support the audio element.
+        </audio>
+        <p>Layered textures and dreamy synths guide this track into a warm, meditative space.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class='socials'>
+      <a href='https://instagram.com/yourname' target='_blank' rel='noopener'>Instagram</a>
+      <a href='https://twitter.com/yourname' target='_blank' rel='noopener'>Twitter/X</a>
+      <a href='mailto:you@example.com'>Email</a>
+    </div>
+    <p>&copy; 2025 Your Artist Name. All rights reserved.</p>
+  </footer>
+</body>
+</html>
